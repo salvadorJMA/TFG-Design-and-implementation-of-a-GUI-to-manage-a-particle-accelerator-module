@@ -1,0 +1,260 @@
+record(ai, "Anritsu:SPECT_InitialFrequency")
+{
+    field(DESC, "Initial Frequency in Anritsu  (MHz)")
+}
+
+record(ai, "Anritsu:SPECT_FinalFrequency")
+{
+    field(DESC, "Final Frequency in Anritsu  (MHz)")
+}
+
+record(ai, "Anritsu:SPECT_ReferenceLevel")
+{
+    field(DESC, "Reference Level in Anritsu  (dBm)")
+}
+
+record(ai, "Anritsu:SPECT_MaximumFrequency")
+{
+    field(DESC, "Maximum Frequency in Anritsu  (MHz)")
+}
+
+record(ai, "Anritsu:SPECT_MaximumPower")
+{
+    field(DESC, "Maximum Power in Anritsu  (dBm)")
+}
+
+record(ai, "Anritsu:SPECT_THD")
+{
+    field(DESC, "THD in Anritsu  (100 MHz - 1.5 GHz)")
+}
+
+
+record(aai,"Anritsu:SPECT_Frequencies")  {
+    field(DESC,"Frequencies in Anritsu  (MHz)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Anritsu:SPECT_Powers")  {
+    field(DESC,"Powers in Anritsu  (dBm)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Anritsu:SPECT_unitsTime")  {
+    field(DESC,"units time in Anritsu  (30s)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Anritsu:SPECT_MaximumPowers")  {
+    field(DESC,"Maximum Powers in Anritsu  (dBm)")
+    field(NELM,"30000")
+          
+}
+
+
+record(ai, "Anritsu:SG_Power")
+{
+    field(DESC, "Power in Anritsu SG (dBm)")
+}
+
+record(ai, "Anritsu:SG_Frequency")
+{
+    field(DESC, "Frequency in Anritsu SG (MHz)")
+}
+
+record(ai, "Anritsu:SG_State")
+{
+    field(DESC, "State of Generator in Anritsu (1 or 0)")
+}
+
+record(ai, "Anritsu:Instrument_Choosed")
+{
+    field(DESC, "Instrument choosed")
+}
+
+
+record(ai, "Anritsu:SomeValueChanged")
+{
+    field(DESC, "Value changed (1 or 0)")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+record(ai, "Agilent:InitialFrequency")
+{
+    field(DESC, "Initial Frequency in Agilent SA (MHz)")
+}
+
+record(ai, "Agilent:FinalFrequency")
+{
+    field(DESC, "Final Frequency in Agilent SA (MHz)")
+}
+
+record(ai, "Agilent:ReferenceLevel")
+{
+    field(DESC, "Reference Level in Agilent SA (dBm)")
+}
+
+record(ai, "Agilent:MaximumFrequency")
+{
+    field(DESC, "Maximum Frequency in Agilent SA (MHz)")
+}
+
+record(ai, "Agilent:MaximumPower")
+{
+    field(DESC, "Maximum Power in Agilent SA (dBm)")
+}
+
+record(ai, "Agilent:THD")
+{
+    field(DESC, "THD in Agilent SA (100 MHz - 1.5 GHz)")
+}
+
+
+record(aai,"Agilent:SA_Frequencies")  {
+    field(DESC,"Frequencies in Agilent SA (MHz)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Agilent:SA_Powers")  {
+    field(DESC,"Powers in Agilent SA (dBm)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Agilent:SA_unitsTime")  {
+    field(DESC,"units time in Agilent SA (30s)")
+    field(NELM,"30000")
+          
+}
+
+record(aai,"Agilent:SA_MaximumPowers")  {
+    field(DESC,"Maximum Powers in Agilent SA (dBm)")
+    field(NELM,"30000")
+          
+}
+
+record(ai, "Agilent:Instrument_Choosed")
+{
+    field(DESC, "Instrument choosed")
+}
+
+record(ai, "Agilent:SomeValueChanged")
+{
+    field(DESC, "Value changed (1 or 0)")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+record(ai, "BLAS:waterTemperature")
+{
+    field(DESC, "Water temperature in the circuit (ºC)")
+}
+
+record(ai, "BLAS:waterFlow")
+{
+    field(DESC, "Water Flow in the circuit (l/s)")
+}
+
+record(ai, "BLAS:IlockFlow")
+{
+    field(DESC, "IlockFlow output signal (V)")
+}
+
+record(ai, "BLAS:Fail0")
+{
+    field(DESC, "Fail0 output signal (V)")
+}
+
+record(ai, "BLAS:Fail1")
+{
+    field(DESC, "Fail1 output signal  (V)")
+}
+
+record(ai, "BLAS:PD_MI")
+{
+    field(DESC, "PD_MI output signal (V)")
+}
+
+record(ai, "BLAS:IlockPatchPanel")
+{
+    field(DESC, "IlockPatchPanel output signal (V)")
+}
+
+record(ai, "BLAS:VSEL0")
+{
+    field(DESC, "VSEL0 output signal (V)")
+}
+
+record(ai, "BLAS:VSEL1")
+{
+    field(DESC, "VSEL1 output signal (V)")
+}
+
+record(ai, "BLAS:12V_DC")
+{
+    field(DESC, "12V_DC input signal (V)")
+}
+
+record(ai, "BLAS:DriverStart")
+{
+    field(DESC, "DriverStart input signal (V)")
+}
+
+record(ai, "BLAS:AmplifierStart")
+{
+    field(DESC, "AmplifierStart input signal (V)")
+}
+
+record(ai, "BLAS:SomeValueChanged")
+{
+    field(DESC, "Value changed (1 or 0)")
+}
+
+
+
