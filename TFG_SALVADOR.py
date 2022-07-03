@@ -1676,7 +1676,7 @@ class MiTFG(QtWidgets.QMainWindow):
 
     # Function that stops the created thread
     # In principle we do not need a stop of the thread because we want it to work continuously
-    def stopAnritsu(self):
+    def stopAgilent(self):
         self.threadAgilent.stop()
 
 ##########################################################################################################################
