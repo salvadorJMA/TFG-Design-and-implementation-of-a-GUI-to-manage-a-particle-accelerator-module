@@ -1,0 +1,118 @@
+openapi: 3.0.2
+info:
+  title: TFG Salvador Jesús Megías Andreu
+  version: 0.1.0
+
+servers:
+  - url: http://127.0.0.1:8000
+    description: Local
+
+paths:
+  /getTemperature:
+    get:
+      summary: Returns BLAS temperature
+      description:
+        It returns BLAS temperature measured in degrees centigrade, calculated from pulses.
+      operationId: getTemperature_getTemperature_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getFlow:
+    get:
+      summary: Returns BLAS water flow
+      description:
+        It returns BLAS water flow measured in liters per second (l/s), calculated from pulses.
+      operationId: getFlow_getFlow_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getIlockFlow:
+    get:
+      summary: Returns BLAS Water flow control loop
+      description:
+        The flow controller returns 12 V DC if the flow is sufficient to operate the system. This case can be seen in Figure 6, where there is 12.4V at the output. Therefore, if the flow is sufficient, as seen in Figure 1, it feeds the 12.4V to the Amplifier Start signal and will allow the system to start.
+      operationId: getIlockFlow_getIlockFlow_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getFail0:
+    get:
+      summary: Indicates fault on pallet 0
+      description:
+        With a zero voltage it is indicated that there is a fault in pallet 0. On the contrary, with 5 V it is indicated that the operation is correct. In our case there is no voltage, which would indicate a fault in pallet 0. However, the RF OUT LED of the amplifier module is green, which indicates that there is no fault in pallet 0. no basic module of the same (the 2 pallets). Therefore, both the LED and the Fail 0 signal contradict each other. The same goes for Fail 1.
+      operationId: getFail0_getFail0_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getFail1:
+    get:
+      summary: indicates fault on pallet 1
+      description:
+        With a zero voltage it is indicated that there is a fault in pallet 1. On the contrary, with 5 V it is indicated that the operation is correct. In our case there is no voltage, which would indicate a fault in pallet 1. However, the RF OUT LED of the amplifier module is green, which indicates that there is no fault in no basic module of the same (the 2 pallets). Therefore, both the LED and the Fail 1 signal contradict each other. The same goes for Fail 0.
+      operationId: getFail1_getFail1_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getPdMi:
+    get:
+      summary: Returns a signal to measure the direct power of the amplifier module
+      description:
+        A voltage of 7.6V corresponds to a nominal power of 2000W. In our case, with an input signal of -3.2dBm, there is a voltage of 8.8V, so it can be thought that more than 2000W are being obtained at the output of the amplifier.
+      operationId: getPdMi_getPdMi_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getIlockPatchPanel:
+    get:
+      summary: This will supply 12 V to the Driver Start signal as long as there is a path with the switches.
+      description:
+        This signal collects the information from the 5 switches. This signal feeds the Driver Start input signal. At the end of this document, the BLAS control diagram is attached, where you can see, in the Patch Panel Safety Interlock part, how the Ilock Patch Panel signal will feed the Driver Start signal with 12 V as long as there is a path with the switches. closed that allow the 12V of the 12V DC signal to come back.
+      operationId: getIlockPatchPanel_getIlockPatchPanel_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getVsel0:
+    get:
+      summary: Second check bit
+      description:
+        Second control bit to select the voltage of the internal source of the amplifier module (0-5V).
+      operationId: getVsel0_getVsel0_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /getVsel1:
+    get:
+      summary: First check bit
+      description:
+        First control bit to select the voltage of the internal source of the amplifier module (0-5V).
+      operationId: getVsel1_getVsel1_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
