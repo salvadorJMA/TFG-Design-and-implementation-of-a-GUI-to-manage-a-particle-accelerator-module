@@ -65,11 +65,11 @@ softIoc -d TFG_EPICS_IOC.txt
 Possible modes of use depending on the version of python you have:
 
 ```
-python TFG_SALVADOR
+python TFG_SALVADOR.py
 ```
 or
 ```
-python3 TFG_SALVADOR
+python3 TFG_SALVADOR.py
 ```
 
 
