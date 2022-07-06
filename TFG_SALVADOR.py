@@ -2252,7 +2252,7 @@ class ThreadClassAgilent(QtCore.QThread):
 ########################################################################################################
 
 # class that is responsible for creating the threads for managing and monitoring any changes to the EPICS IOC records
-# each 2 seconds. A 1 will be issued if there is any change in any record of the Anritsu machine
+# in real time. A 1 will be issued if there is any change in any record of the Anritsu machine
 # If there is no change, nothing will be issued
 
 class ThreadClassEPICSAnritsu(QtCore.QThread):
@@ -2270,7 +2270,7 @@ class ThreadClassEPICSAnritsu(QtCore.QThread):
     # Function that is responsible for emitting a 1 through the signal defined at the beginning of the class
     # if the value of the PV (record) "Anritsu_SomeValueChanged" of our EPICS IOCS is 1 
     # (that is, if there has been any record related to the Anritsu machine has been modified)
-    # all this is done indefinitely every 2 seconds
+    # all this is done indefinitely all the time
     def run(self):
         while (True):
 
@@ -2278,7 +2278,6 @@ class ThreadClassEPICSAnritsu(QtCore.QThread):
                 recordAnritsuChanged=1
                 self.any_signal.emit(recordAnritsuChanged)
 
-            time.sleep(2)
 
 #######     #########       #############       ##########          ##########      ############      ##########
 
@@ -2293,7 +2292,7 @@ class ThreadClassEPICSAnritsu(QtCore.QThread):
 
 
 # class that is responsible for creating the threads for managing and monitoring any changes to the EPICS IOC records
-# each 2 seconds. A 1 will be issued if there is any change in any record of the Agilent machine
+# in real time. A 1 will be issued if there is any change in any record of the Agilent machine
 # If there is no change, nothing will be issued
 
 class ThreadClassEPICSAgilent(QtCore.QThread):
@@ -2311,14 +2310,13 @@ class ThreadClassEPICSAgilent(QtCore.QThread):
     # Function that is responsible for emitting a 1 through the signal defined at the beginning of the class
     # if the value of the PV (record) "Agilent_SomeValueChanged" of our EPICS IOCS is 1 
     # (that is, if there has been any record related to the Agilent machine has been modified)
-    # all this is done indefinitely every 2 seconds
+    # all this is done indefinitely all the time
     def run(self):
         while (True):
             if int(self.Agilent_SomeValueChanged.value) == 1:
                 recordAgilentChanged=1
                 self.any_signal.emit(recordAgilentChanged)
 
-            time.sleep(2)
 
 #######     #########       #############       ##########          ##########      ############      ##########
 
@@ -2334,7 +2332,7 @@ class ThreadClassEPICSAgilent(QtCore.QThread):
 
 
 # class that is responsible for creating the threads for managing and monitoring any changes to the EPICS IOC records
-# each 2 seconds. A 1 will be issued if there is any change in any record of the BLAS API
+# in real time. A 1 will be issued if there is any change in any record of the BLAS API
 # If there is no change, nothing will be issued
 
 class ThreadClassEPICS_BLAS(QtCore.QThread):
@@ -2352,14 +2350,13 @@ class ThreadClassEPICS_BLAS(QtCore.QThread):
     # Function that is responsible for emitting a 1 through the signal defined at the beginning of the class
     # if the value of the PV (record) "BLAS_SomeValueChanged" of our EPICS IOCS is 1 
     # (that is, if there has been any record related to the BLAS API has been modified)
-    # all this is done indefinitely every 2 seconds
+    # all this is done indefinitely all the time
     def run(self):
         while (True):
             if int(self.BLAS_SomeValueChanged.value) == 1:
                 recordBLASChanged=1
                 self.any_signal.emit(recordBLASChanged)
 
-            time.sleep(2)
 
 #######     #########       #############       ##########          ##########      ############      ##########
 
