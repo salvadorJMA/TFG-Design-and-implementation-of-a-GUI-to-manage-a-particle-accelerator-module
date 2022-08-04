@@ -8,7 +8,7 @@ This is the result of a long investigation to carry out my Bachelor's Thesis. It
 * BLAS: Beam Loading Advance Simulator
 * SSPA Drawer: Solid State Power Amplifier Drawer
 
-![System Overview](img/SYSTEM.png "System Overview")
+![System Overview](images/SYSTEM.png "System Overview")
 
 ## Starting 🚀
 
