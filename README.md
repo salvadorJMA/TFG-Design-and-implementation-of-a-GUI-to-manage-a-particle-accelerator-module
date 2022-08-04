@@ -5,6 +5,11 @@
 
 This is the result of a long investigation to carry out my Bachelor's Thesis. It consists of the design and development of a GUI capable of remotely controlling the Anritsu MS2830A machine (signal generator and spectrum analyzer mode) and the Agilent N9020A machine (spectrum analyzer mode), as well as a BLAS and that makes use of EPICS to keep everything coordinated in case there are several of these GUIs deployed on different devices on the same subnet.
 
+* BLAS: Beam Loading Advance Simulator
+* SSPA Drawer: Solid State Power Amplifier Drawer
+
+![System Overview](img/SYSTEM.png "System Overview")
+
 ## Starting 🚀
 
 _These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes.._
